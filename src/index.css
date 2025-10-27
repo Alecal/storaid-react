@@ -10,6 +10,7 @@
     --light-yellow: #faf8ec;
 
     --none-color: #c4c4c4;
+    --border-light-gr: #ececec;
 }
 
 h1, h2, h3, h4 {
@@ -32,6 +33,8 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .body-text-medium { font-size: 1.125rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 
 .body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700; color: var(--primary-green-dark);}
+
+.col-primary {color: var(--primary-color);}
 
 .text-tiny {
     font-size: 0.5rem;
@@ -136,7 +139,7 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .imageCard{
     width: 100%;
     height: 25rem;
-    border:3px solid #ececec;
+    border:3px solid var(--border-light-gr);
     background-color: var(--none-color);
 }
 
@@ -160,7 +163,7 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 }
 
 .tileCard {
-    border: 3px solid #ececec;
+    border: 3px solid var(--border-light-gr);
     border-radius: .5rem;
     padding: 1rem;
     color: var(--primary-green-dark);
@@ -249,4 +252,54 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .whyUsWrapper{
 	background-color: var(--light-yellow);
 	width: 100%;
+}
+
+.pricingCard {
+	border-radius: .5rem;
+	border:3px solid var(--border-light-gr);
+	color: var(--primary-green-dark);
+	background-color: var(--primary-lime-light);
+}
+
+.pricingCard:hover{
+	background-color: var(--primary-green-dark);
+
+	transition: background-color 1s ease;
+}
+
+.pricingCard:hover h5,
+.pricingCard:hover li,
+.pricingCard:hover hr,
+.pricingCard:hover .body-text-bold,
+.pricingCard:hover p
+{
+	color: white;
+}
+
+.pricingCard:hover svg,
+.pricingCard:hover .body-text-pricing
+{
+	color: var(--primary-color);
+}
+
+.body-text-pricing {
+	font-size: 3rem;
+	font-family: "Urbanist", sans-serif; 
+	font-weight: 700;
+	color: var(--primary-color);
+}
+
+.pricingCard-dollarSign{
+	
+	svg {
+		transform: translatey(-1.5rem);
+		width: 1.5rem;
+		height: 1.5rem;
+		padding-right: 1rem;
+	}
+}
+
+.pricingCardSeparator {
+	margin: 1.5rem 0;
+	background-color: var(--primary-green-dark);
 }

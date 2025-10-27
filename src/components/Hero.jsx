@@ -13,7 +13,7 @@ function Hero() {
             </Headline>
 
             <p className='text-white mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a sem magna. Etiam ac odio sit amet lorem fringilla sodales. Cras lobortis, libero at iaculis luctus, nisi ex pellentesque nisi, at euismod sem ipsum ac dolor.</p>
-            <ButtonStandard label="Discover More"/>
+            <ButtonStandard>Discover More</ButtonStandard>
         </div>
         <div className="w-1/3 heroSilhouette"></div>
     </div>

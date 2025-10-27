@@ -18,6 +18,7 @@ import {  faPhone,
 import Brands from './components/Brands'
 import Headline from './components/Headline'
 import Testimonials from './components/Testimonials'
+import PricingCard from './components/PricingCard'
 
 
 const App = () => {
@@ -51,7 +52,7 @@ const App = () => {
 
       <div className="flex gap-6 mb-10">
         <div className="w-1/2 flex align-middle m-auto">
-          <ButtonStandard label="Discover More"/>
+          <ButtonStandard>Discover More</ButtonStandard>
         </div>
 
         <div className="w-1/2">
@@ -102,6 +103,20 @@ const App = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.
                 </p>
                     <div className='imageCard flex items-center justify-center text-white'></div>
+            </div>
+        </div>
+    </section>
+    <section id="pricing" className='flex gap-8 mx-auto max-w-7xl py-25'>
+        <div className='w-full'>
+            <div className='w-150'>
+                <Headline size="h3" title="Pricing Plan" color="text-green">Find the Perfect Plan for Your Storage Needs</Headline>
+            </div>
+
+            <div className='flex justify-between gap-6'>
+                <PricingCard title='Small Unit' price='50'/>
+                <PricingCard title='Medium Unit' price='100'/>
+                <PricingCard title='Large Unit' price='150' listItems={['Very good item', 'Much bigger storage', 'Very recommended','Both by experts and not','You have to get this']}/>
+                <PricingCard title='Executive Unit' price='200'/>
             </div>
         </div>
     </section>

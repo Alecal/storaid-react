@@ -12,7 +12,7 @@ function Header() {
             <div className="logo"><img src="src/assets/storaid-logo.svg"/></div>
             {/* ⚠️  React router behövs här för länkarna */}
             <Navigation />
-            <ButtonStandard label="Book Now"/>
+            <ButtonStandard>Book Now</ButtonStandard>
 
         </div>
     </>

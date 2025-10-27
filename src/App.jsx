@@ -15,7 +15,10 @@ const App = () => {
           <AboutUsCard/>
       </div>
       <div class="w-full md:w-1/2 py-4">
-          Column 2 Content
+            <p className="text-primary-bold">About Us</p>
+            <h4 className="text-green leading-tight mb-5">Providing a Safe Space for Your Treasured Items</h4>
+            <p className='mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
+           
       </div>
     </div>
     </section>

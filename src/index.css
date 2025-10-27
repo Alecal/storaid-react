@@ -1,68 +1,61 @@
+@import "tailwindcss";
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --primary-green-light: #355349;
+    --primary-green-dark: #12372a;
+    --primary-lime-light: #f1ffea;
+    --primary-color: #f1c30c;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+h1, h2, h3, h4 {
+    font-family: "Urbanist", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+h1 { font-size: 5rem; line-height: 5rem; }
+h2 { font-size: 4rem; line-height: 5rem; }
+h3 { font-size: 3.25rem; line-height: 3.25rem; }
+h4 { font-size: 1.5625rem; line-height: 1.5625rem; }
+h5, h6 { font-family: "Urbanist", sans-serif; font-weight: 700; font-style: normal; }
+h5 { font-size: 1.5rem; line-height: 1.5625rem; }
+h6 { font-size: 1.25rem; line-height: 1.5625rem; }
+p { font-family: "Inter", sans-serif; font-weight: 400; font-style: normal; }
+
+.body-text-standard { font-size: 1rem; line-height: 1.5rem; }
+.body-text-small { font-size: 0.8rem; line-height: 1.5rem; }
+.body-text-medium { font-size: 1.125rem; line-height: 1.5rem; }
+
+
+.contactContainer{
+    display: flex;
+    gap: 2rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.topBarBg{
+    background-color: var(--primary-green-dark);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+.topBarContainer{
+    background-color: var(--primary-green-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
 }
-button:hover {
-  border-color: #646cff;
+.socialsContainer {
+    display: flex;
+    width: auto;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.socialsBadge{
+    background-color: var(--primary-color);
+    height: 1.5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: 0 0.5rem;
+    padding: 0.2rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.socialsIcon {
+    color: var(--primary-green-dark);
 }

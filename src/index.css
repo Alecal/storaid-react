@@ -2,6 +2,7 @@
 
 :root {
     --primary-green-light: #355349;
+    --primary-green-transparent: #12372acc;
     --primary-green-dark: #12372a;
     --primary-lime-light: #f1ffea;
     --primary-color: #f1c30c;
@@ -29,6 +30,8 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .body-text-standard { font-size: 1rem; line-height: 1.5rem; }
 .body-text-small { font-size: 0.8rem; line-height: 1.5rem; }
 .body-text-medium { font-size: 1.125rem; line-height: 1.5rem; }
+
+.body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700;}
 
 .text-tiny {
     font-size: 0.5rem;
@@ -132,7 +135,7 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
 .aboutUsCard{
     width: 100%;
-    height: 400px;
+    height: 25rem;
     border:3px solid #ececec;
     background-color: var(--none-color);
 }
@@ -200,4 +203,45 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .brandItem{
     width: auto;
     height: auto;
+}
+
+.testimonialsWrapper {
+	background-image: url('assets/bg/warehouse.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem; 
+    width: 100%;
+}
+
+.testimonialsContainer {
+    background-color: var(--primary-green-transparent);
+    width: 100%;
+    height: 100%;
+}
+.testimonialsContent {
+    width: 100%;
+    height: 100%;
+}
+
+.testimonialsCardWrapper {
+    position: relative;
+}
+
+.testimonialsCardIcon {
+    position: absolute;
+    right: 1rem;
+    bottom: .5rem;
+    svg{
+        color: var(--primary-color);
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.testimonialsCardAvatar{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--none-color);
 }

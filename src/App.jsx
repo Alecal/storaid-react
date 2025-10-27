@@ -12,12 +12,12 @@ import {  faPhone,
           faSackDollar,
           faBroom,
           faClock,
-          faQuoteRight,
           faLocationDot,
           faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import Brands from './components/Brands'
 import Headline from './components/Headline'
+import Testimonials from './components/Testimonials'
 
 
 const App = () => {
@@ -25,6 +25,7 @@ const App = () => {
     <>
     <Header/>
     <Hero/>
+    
     <section id="aboutUs" className='mx-auto max-w-7xl py-10'>
       <div className="flex flex-col md:flex-row gap-6">
       <div className="w-full md:w-1/2 py-4">
@@ -54,22 +55,24 @@ const App = () => {
         </div>
 
         <div className="w-1/2">
-          <InfoBadge icon={faPhone} title="More information" subTitle="+46 8 123 122 44">Tjena</InfoBadge>
-        </div>
-      </div>
-
-      <div className="flex">
-
-
-        <div className="w-1/2">
-          
+          <InfoBadge icon={faPhone} title="More information" subTitle="+46 8 123 122 44"></InfoBadge>
         </div>
       </div>
       </div>
     </div>
     </section>
+
     <Brands/>
-    
+
+    <section id="testimonials" className='testimonialsWrapper'>
+      <div className="testimonialsContainer">
+        <div className="testimonialsContent text-center mx-auto max-w-7xl py-20">
+          <Headline title="Testimonials" size="h3" color="text-white">See What Our Client Have to Say</Headline>
+          <p className='mb-5 text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.</p>
+            <Testimonials></Testimonials>
+        </div>
+      </div>
+    </section>
     </>
   )
 }

@@ -16,6 +16,7 @@ import {  faPhone,
           faLocationDot,
           faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
+import Brands from './components/Brands'
 
 
 const App = () => {
@@ -23,7 +24,7 @@ const App = () => {
     <>
     <Header/>
     <Hero/>
-    <section className='mx-auto max-w-7xl py-10'>
+    <section id="aboutUs" className='mx-auto max-w-7xl py-10'>
       <div class="flex flex-col md:flex-row gap-6">
       <div class="w-full md:w-1/2 py-4">
           <AboutUsCard/>
@@ -55,12 +56,10 @@ const App = () => {
           <InfoBadge icon={faPhone} title="More information" subTitle="+46 8 123 122 44">Tjena</InfoBadge>
         </div>
       </div>
-      
-      
-
       </div>
     </div>
     </section>
+    <Brands/>
     </>
   )
 }

@@ -17,6 +17,7 @@ import {  faPhone,
           faEnvelope,
 } from '@fortawesome/free-solid-svg-icons';
 import Brands from './components/Brands'
+import Headline from './components/Headline'
 
 
 const App = () => {
@@ -30,11 +31,10 @@ const App = () => {
           <AboutUsCard/>
       </div>
       <div className="w-full md:w-1/2 py-4">
-        <p className="text-primary-bold">About Us</p>
-        <h4 className="text-green leading-tight mb-5">Providing a Safe Space for Your Treasured Items</h4>
-        <p className='mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
+      <Headline size="h4" title="About Us" color="text-green">Providing a Safe Space for Your Treasured Items</Headline>
+      <p className='mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
 
-      <div className="flex gap-6 mb-10">
+      <div className="flex gap-6 mb-5">
         <div className="w-1/2">
           <Tile title="Vision">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.
@@ -47,8 +47,9 @@ const App = () => {
           </Tile>
         </div>
       </div>
-      <div className="flex">
-        <div className="w-1/2">
+
+      <div className="flex gap-6 mb-10">
+        <div className="w-1/2 flex align-middle m-auto">
           <ButtonStandard label="Discover More"/>
         </div>
 
@@ -56,10 +57,19 @@ const App = () => {
           <InfoBadge icon={faPhone} title="More information" subTitle="+46 8 123 122 44">Tjena</InfoBadge>
         </div>
       </div>
+
+      <div className="flex">
+
+
+        <div className="w-1/2">
+          
+        </div>
+      </div>
       </div>
     </div>
     </section>
     <Brands/>
+    
     </>
   )
 }

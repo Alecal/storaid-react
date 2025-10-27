@@ -6,11 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function InfoBadge({ icon, title, subTitle = '', children}) {
 
   return (
-    <div className='infoBadgeContainer'>
+    <div className='infoBadgeContainer text-green mb-1'> 
         <div className="infoBadgeIcon"><FontAwesomeIcon icon={icon} /></div>
         <div>
         {title !== '' && (
-            <h6 className={subTitle === '' ? (children !== '' ? 'mb-3' : 'mb-1') : ''}>
+            <h6 className={subTitle === '' ? (children !== '' ? 'mb-2' : 'mb-1') : ''}>
                 {title}
             </h6>
         )}

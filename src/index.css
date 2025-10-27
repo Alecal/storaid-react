@@ -27,11 +27,11 @@ h5 { font-size: 1.5rem; line-height: 1.5625rem; font-weight: 600;}
 h6 { font-size: 1.25rem; line-height: 1.5625rem; }
 p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
-.body-text-standard { font-size: 1rem; line-height: 1.5rem; }
-.body-text-small { font-size: 0.8rem; line-height: 1.5rem; }
-.body-text-medium { font-size: 1.125rem; line-height: 1.5rem; }
+.body-text-standard { font-size: 1rem; line-height: 1.5rem; color: var(--primary-green-dark);}
+.body-text-small { font-size: 0.8rem; line-height: 1.5rem; color: var(--primary-green-dark);}
+.body-text-medium { font-size: 1.125rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 
-.body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700;}
+.body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700; color: var(--primary-green-dark);}
 
 .text-tiny {
     font-size: 0.5rem;
@@ -133,7 +133,7 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
     align-items: center;
 }
 
-.aboutUsCard{
+.imageCard{
     width: 100%;
     height: 25rem;
     border:3px solid #ececec;
@@ -239,9 +239,14 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
     }
 }
 
-.testimonialsCardAvatar{
+.testimonialsCardAvatar {
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
     background-color: var(--none-color);
+}
+
+.whyUsWrapper{
+	background-color: var(--light-yellow);
+	width: 100%;
 }

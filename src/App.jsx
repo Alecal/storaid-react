@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import AboutUsCard from './components/AboutUsCard'
+import Tile from './components/Tile'
 
 
 const App = () => {
@@ -15,10 +16,26 @@ const App = () => {
           <AboutUsCard/>
       </div>
       <div class="w-full md:w-1/2 py-4">
-            <p className="text-primary-bold">About Us</p>
-            <h4 className="text-green leading-tight mb-5">Providing a Safe Space for Your Treasured Items</h4>
-            <p className='mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
-           
+        <p className="text-primary-bold">About Us</p>
+        <h4 className="text-green leading-tight mb-5">Providing a Safe Space for Your Treasured Items</h4>
+        <p className='mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
+
+      <div class="flex gap-6">
+        <div class="w-1/2">
+          <Tile title="Vision">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.
+          </Tile>
+        </div>
+
+        <div class="w-1/2">
+          <Tile title="Mission">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.
+          </Tile>
+        </div>
+      </div>
+
+
+
       </div>
     </div>
     </section>

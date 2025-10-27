@@ -20,9 +20,9 @@ h2 { font-size: 4rem; line-height: 5rem; }
 h3 { font-size: 3.25rem; line-height: 3.25rem; }
 h4 { font-size: 2.5rem; line-height: 2.3rem; }
 h5, h6 { font-family: "Urbanist", sans-serif; font-weight: 700; font-style: normal; }
-h5 { font-size: 1.5rem; line-height: 1.5625rem; }
+h5 { font-size: 1.5rem; line-height: 1.5625rem; font-weight: 600;}
 h6 { font-size: 1.25rem; line-height: 1.5625rem; }
-p { font-family: "Inter", sans-serif; font-weight: 200; font-style: normal;}
+p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
 .body-text-standard { font-size: 1rem; line-height: 1.5rem; }
 .body-text-small { font-size: 0.8rem; line-height: 1.5rem; }
@@ -152,4 +152,17 @@ p { font-family: "Inter", sans-serif; font-weight: 200; font-style: normal;}
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.tileCard {
+    border: 3px solid #ececec;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: var(--primary-green-dark);
+
+    transition: border-color 0.5s ease;
+}
+
+.tileCard:hover {
+    border: 3px solid var(--primary-color);
 }

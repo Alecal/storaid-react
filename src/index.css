@@ -166,3 +166,25 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .tileCard:hover {
     border: 3px solid var(--primary-color);
 }
+
+.infoBadgeContainer {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.infoBadgeIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-green-dark);
+    color: var(--primary-color);
+    border-radius: 50%;
+    height: 4rem;
+    aspect-ratio: 1;
+    
+    svg { 
+    height: 2rem;
+    width: 2rem;
+    }
+}

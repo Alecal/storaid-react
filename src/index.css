@@ -30,11 +30,22 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
 .body-text-standard { font-size: 1rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 .body-text-small { font-size: 0.8rem; line-height: 1.5rem; color: var(--primary-green-dark);}
+.body-text-small-top { font-size: 0.8rem; line-height: 1.5rem; color: white;}
 .body-text-medium { font-size: 1.125rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 
 .body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700; color: var(--primary-green-dark);}
 
 .col-primary {color: var(--primary-color);}
+
+.buttonHover:hover {
+    background-color: var(--primary-green-dark);
+    color: white;
+}
+
+.buttonHoverLight:hover {
+    background-color: white;
+    color: var(--primary-green-dark);
+}
 
 .text-tiny {
     font-size: 0.5rem;
@@ -264,7 +275,7 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .pricingCard:hover{
 	background-color: var(--primary-green-dark);
 
-	transition: background-color 1s ease;
+	transition: background-color 0.5s ease;
 }
 
 .pricingCard:hover h5,

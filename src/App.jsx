@@ -36,14 +36,14 @@ const App = () => {
       <Headline size="h4" title="About Us" color="text-green">Providing a Safe Space for Your Treasured Items</Headline>
       <p className='mb-5'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi, non sodales augue. Phasellus eget elit gravida.</p>
 
-      <div className="flex gap-6 mb-5">
-        <div className="w-1/2">
+      <div className="flex gap-6 mb-5 ">
+        <div className="w-1/2 transition duration-200 transform hover:scale-105">
           <Tile title="Vision">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.
           </Tile>
         </div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 transition duration-200 transform hover:scale-105">
           <Tile title="Mission">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan tium doloremque laudantium.
           </Tile>

@@ -11,10 +11,10 @@ function TopBar() {
       <div className="topBarContainer container mx-auto">
         <div className="contactContainer">
           <div className="contactItem">
-            <p className="body-text-small text-white"><FontAwesomeIcon icon={faPhone} />+46 8 123 122 44</p>
+            <p className="body-text-small-top text-white"><FontAwesomeIcon icon={faPhone} />+46 8 123 122 44</p>
           </div>
           <div className="contactItem">
-            <p className="body-text-small text-white"><FontAwesomeIcon icon={faEnvelopeOpen} />contact@domain.com</p>
+            <p className="body-text-small-top text-white"><FontAwesomeIcon icon={faEnvelopeOpen} />contact@domain.com</p>
           </div>
         </div>
         <div className="socialsContainer">

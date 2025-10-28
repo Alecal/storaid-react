@@ -19,7 +19,7 @@ const TestimonialCard = ({ item }) => {
     }
   
     return (
-    <div className='testimonialsCardWrapper flex-1 h-70 rounded-md p-6 text-left bg-white text-green flex flex-col'>
+    <div className='testimonialsCardWrapper flex-1 h-70 rounded-md p-6 text-left bg-white text-green flex flex-col transition duration-200 transform hover:scale-105'>
 
         <div className='mb-5'>{ generateRating(item.rating) }</div>
         <p className='mb-5'>{ item.comment }</p>

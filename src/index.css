@@ -28,10 +28,13 @@ h5 { font-size: 1.5rem; line-height: 1.5625rem; font-weight: 600;}
 h6 { font-size: 1.25rem; line-height: 1.5625rem; }
 p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
+a { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.5rem; color: var(--primary-color);}
+a:hover {color: var(--primary-green-dark);}
+
 .body-text-standard { font-size: 1rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 .body-text-small { font-size: 0.8rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 .body-text-small-top { font-size: 0.8rem; line-height: 1.5rem; color: white;}
-.body-text-medium { font-size: 1.125rem; line-height: 1.5rem; color: var(--primary-green-dark);}
+.body-text-medium { font-size: 1.125rem; line-height: 1.5rem; color: var(--primary-green-dark);}W
 
 .body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700; color: var(--primary-green-dark);}
 
@@ -319,4 +322,44 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 .pricingCardSeparator {
 	margin: 1.5rem 0;
 	background-color: var(--primary-green-dark);
+}
+
+.blogCard {
+    background-color: var(--primary-green-dark);
+    border-radius: .2rem;
+}
+
+.blogCard:hover {
+	background-color: var(--primary-lime-light);
+	transition: background-color 0.5s ease;
+}
+
+.blogCard:hover p,
+.blogCard:hover h6 {
+    color:var(--primary-green-dark);
+    transition: color 0.5s ease;
+}
+
+.blogCardImage img {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+}
+
+.blogCard:hover .blogCardImage img {
+    filter: none;
+}
+
+.blogCardImage {
+    background-color: var(--none-color);
+    border-radius: .2rem;
+}
+
+.blogCardImage img {
+    filter: grayscale();
+}
+
+.blogCard-small-text {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    color: white;
 }

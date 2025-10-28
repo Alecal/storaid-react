@@ -19,6 +19,7 @@ import Brands from './components/Brands'
 import Headline from './components/Headline'
 import Testimonials from './components/Testimonials'
 import PricingCard from './components/PricingCard'
+import BlogSection from './components/BlogSection'
 
 
 const App = () => {
@@ -127,6 +128,7 @@ const App = () => {
             <ButtonStandard mode="light">Book Now</ButtonStandard>
         </div>
     </section>
+    <BlogSection></BlogSection>
     </>
   )
 }

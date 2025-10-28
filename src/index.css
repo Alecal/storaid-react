@@ -37,6 +37,12 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
 .col-primary {color: var(--primary-color);}
 
+.sectionGreenLight {
+    background-color: var(--primary-green-light);
+    width: 100%;
+}
+
+
 .buttonHover:hover {
     background-color: var(--primary-green-dark);
     color: white;

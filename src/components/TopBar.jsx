@@ -7,7 +7,7 @@ import SocialsBadge from './SocialsBadge'
 
 function TopBar() {
   return (
-    <div className="topBarBg">
+    <div className="darkBg">
       <div className="topBarContainer container mx-auto">
         <div className="contactContainer">
           <div className="contactItem">

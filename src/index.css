@@ -31,6 +31,21 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 a { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.5rem; color: var(--primary-color);}
 a:hover {color: var(--primary-green-dark);}
 
+.inputField {
+    background-color: white;
+    border: 1px solid var(--primary-color); 
+    padding: 10px 15px;
+    border-radius: 5px;
+    line-height: 1.5;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+.inputField::placeholder {
+    color: var(--primary-color);
+    opacity: 1;
+    font-weight: 300;
+}
+
 .body-text-standard { font-size: 1rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 .body-text-small { font-size: 0.8rem; line-height: 1.5rem; color: var(--primary-green-dark);}
 .body-text-small-top { font-size: 0.8rem; line-height: 1.5rem; color: white;}
@@ -42,6 +57,11 @@ a:hover {color: var(--primary-green-dark);}
 
 .sectionGreenLight {
     background-color: var(--primary-green-light);
+    width: 100%;
+}
+
+.sectionYellowLight {
+    background-color: var(--light-yellow);
     width: 100%;
 }
 
@@ -84,7 +104,7 @@ a:hover {color: var(--primary-green-dark);}
     gap: 2rem;
 }
 
-.topBarBg{
+.darkBg{
     background-color: var(--primary-green-dark);
 }
 

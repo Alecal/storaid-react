@@ -34,11 +34,11 @@ a:hover {color: var(--primary-green-dark);}
 .inputField {
     background-color: white;
     border: 1px solid var(--primary-color); 
-    padding: 10px 15px;
     border-radius: 5px;
     line-height: 1.5;
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
 }
+
 
 .inputField::placeholder {
     color: var(--primary-color);
@@ -310,7 +310,7 @@ a:hover {color: var(--primary-green-dark);}
 .pricingCard:hover h5,
 .pricingCard:hover li,
 .pricingCard:hover hr,
-.pricingCard:hover .body-text-bold,
+.pricingCard:hover .body-text-standard,
 .pricingCard:hover p
 {
 	color: white;

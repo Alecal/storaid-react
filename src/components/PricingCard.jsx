@@ -20,7 +20,7 @@ function PricingCard({
                         <FontAwesomeIcon icon={faDollarSign} />
                     </span>
                     {price}
-                    <span className='body-text-bold ml-5'>
+                    <span className='body-text-standard ml-5'>
                         /month
                     </span>
                 </p> 

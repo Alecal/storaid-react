@@ -1,6 +1,7 @@
 import React from 'react'
 import Headline from './Headline'
 import InputField from './InputField'
+import ButtonStandard from './ButtonStandard'
 
 function SubscribeNewsletter() {
   return (
@@ -13,9 +14,10 @@ function SubscribeNewsletter() {
             </div>
 
             <div className='w-1/2'>
-                <InputField/>
-            <form>
-            </form>
+                <form className='flex gap-5' onSubmit={ (e) => e.preventDefault() }>
+                  <InputField placeholder='Enter your email' className='flex-1' id='email' required='true'/>
+                  <ButtonStandard className='w-10' type='submit'>Submit</ButtonStandard>
+                </form>
             </div>
 
 

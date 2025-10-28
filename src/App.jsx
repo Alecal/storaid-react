@@ -21,6 +21,7 @@ import Testimonials from './components/Testimonials'
 import PricingCard from './components/PricingCard'
 import BlogSection from './components/BlogSection'
 import SubscribeNewsletter from './components/SubscribeNewsletter'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -131,6 +132,7 @@ const App = () => {
     </section>
     <BlogSection/>
     <SubscribeNewsletter/>
+    <Footer/>
     </>
   )
 }

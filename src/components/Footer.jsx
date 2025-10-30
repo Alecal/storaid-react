@@ -2,9 +2,12 @@ import React from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import SubscribeNewsletter from './SubscribeNewsletter';
 
 function Footer() {
   return (
+    <>
+    <SubscribeNewsletter/>
     <footer id='footer' className='darkBg w-full py-8'>
             <div className='mx-auto max-w-7xl text-white text-sm'>
                 <div className='flex'>
@@ -36,6 +39,7 @@ function Footer() {
                 </div>
             </div>
     </footer>
+    </>
   )
 }
 

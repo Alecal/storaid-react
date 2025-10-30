@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 :root {
+    --primary-green-lighter: #9eb3a3;
     --primary-green-light: #355349;
     --primary-green-transparent: #12372acc;
     --primary-green-dark: #12372a;
@@ -55,8 +56,18 @@ a:hover {color: var(--primary-green-dark);}
 
 .col-primary {color: var(--primary-color);}
 
+
 .sectionGreenLight {
     background-color: var(--primary-green-light);
+    width: 100%;
+}
+
+.sectionGreenLighter {
+    background-color: var(--primary-green-lighter);
+}
+
+.sectionGreen {
+    background-color: var(--primary-green-dark);
     width: 100%;
 }
 
@@ -124,7 +135,6 @@ a:hover {color: var(--primary-green-dark);}
     height: 1.5rem;
     aspect-ratio: 1;
     border-radius: 50%;
-    margin: 0 0.5rem;
     padding: 0.2rem;
 }
 
@@ -163,10 +173,17 @@ a:hover {color: var(--primary-green-dark);}
 
 .heroSilhouette {
     background-image: url(assets/silhouette-man.svg);
-    background-size: contain; /* Added to ensure the SVG is visible and scaled */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     height: 40rem;
+}
+
+.silhouetteWoman {
+    background-image: url(assets/silhouette-woman.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .aboutUsCardWrapper {
@@ -221,6 +238,12 @@ a:hover {color: var(--primary-green-dark);}
     align-items: center;
 }
 
+.infoBadgeContainerSm {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .infoBadgeIcon {
     display: flex;
     align-items: center;
@@ -235,6 +258,30 @@ a:hover {color: var(--primary-green-dark);}
     height: 2rem;
     width: 2rem;
     }
+}
+
+.infoBadgeIconSm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-green-dark);
+    color: var(--primary-color);
+    border-radius: 50%;
+    height: 3rem;
+    aspect-ratio: 1;
+    
+    svg { 
+    height: 1.5rem;
+    width: 1.5rem;
+    }
+}
+
+.dividerLine {
+    display: block;
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .brandsContainer {

@@ -23,7 +23,7 @@ function SocialsBadge({ names }) {
         const iconSrc = icons[name];
         
         return (
-          <div key={name} className="socialsBadge">
+          <div key={name} className="socialsBadge mr-3">
             <img
               className="socialsIcon"
               src={iconSrc}

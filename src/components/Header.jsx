@@ -2,6 +2,8 @@ import React from 'react'
 import TopBar from './TopBar'
 import ButtonStandard from './ButtonStandard'
 import Navigation from './Navigation'
+import LogoType from '/src/assets/storaid-logo.svg'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -9,11 +11,13 @@ function Header() {
         <TopBar/>
         <div className="headerContainer container mx-auto py-4">
 
-            <div className="logo"><img src="src/assets/storaid-logo.svg"/></div>
-            {/* ⚠️  React router behövs här för länkarna */}
+            <div className="logo">
+              <Link to="/">
+                <img src={LogoType}/>
+              </Link>
+            </div>
             <Navigation />
-            <ButtonStandard>Book Now</ButtonStandard>
-
+              <ButtonStandard to="/booking">Book Now</ButtonStandard>
         </div>
     </>
   )

@@ -16,7 +16,7 @@ function SubscribeNewsletter() {
             <div className='w-1/2'>
                 <form className='flex gap-5' onSubmit={ (e) => e.preventDefault() }>
                   <InputField placeholder='Enter your email' className='flex-1' id='email' required='true'/>
-                  <ButtonStandard className='w-10' type='submit'>Submit</ButtonStandard>
+                  <ButtonStandard type='submit'>Submit</ButtonStandard>
                 </form>
             </div>
 

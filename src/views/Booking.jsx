@@ -10,7 +10,7 @@ function Booking() {
     <>
       <PageHeadline title='Booking'/>
       <BookNowForm/>
-      <WhyUs/>
+      <WhyUs bg='sectionYellowLight'/>
       <BookNow/>
       <Faq/>
     </>

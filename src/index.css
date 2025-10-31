@@ -40,6 +40,9 @@ a:hover {color: var(--primary-green-dark);}
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
 }
 
+.block-label {
+    display: block;
+}
 
 .inputField::placeholder {
     color: var(--primary-color);

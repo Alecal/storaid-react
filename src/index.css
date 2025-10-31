@@ -33,11 +33,15 @@ a { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.5rem; colo
 a:hover {color: var(--primary-green-dark);}
 
 .inputField {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-style: normal;
     background-color: white;
     border: 1px solid var(--primary-color); 
     border-radius: 5px;
     line-height: 1.5;
-    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    vertical-align: top;
 }
 
 .block-label {

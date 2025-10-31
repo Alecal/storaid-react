@@ -2,6 +2,9 @@ import React from 'react'
 import Headline from './Headline'
 import InputField from './InputField'
 import ButtonStandard from './ButtonStandard'
+import { Form } from 'react-router-dom'
+import FormField from './FormField'
+import FormInput from './FormInput.old'
 
 function BookNowForm() {
   return (
@@ -20,28 +23,12 @@ function BookNowForm() {
             <div className='imageCard'></div>
           </div>
           <div className='w-1/2'>
-            <form className='sectionYellowLight h-full rounded-md p-5'>
-
-
-              <div className='flex gap-5 mb-5'>
-                <div className='w-1/2'>
-                <InputField label='Your Name' placeholder='Your Name' placeholderStar='false' type='name' required='true' errorMessage='Please enter a valid name.'></InputField>
-                </div>
-                <div className='w-1/2'>
-                <InputField label='Email' placeholder='Email' placeholderStar='false' type='name' required='true' errorMessage='Please enter a valid email.'></InputField>
-                </div>
-              </div>
-
-              <div className='mb-5'>
-                <InputField label='Choose Unit' placeholderStar='false' placeholder='Choose Unit' type='unit' required='true' errorMessage='Please choose a unit.' error='true'></InputField>
-              </div>
-
-              <div className='mb-5'>
-                <InputField label='Storage Purpose' placeholder='Describe your storage purpose so that we can match your request' placeholderStar='false' type='comment' height='large'></InputField>
-              </div>
-              <ButtonStandard type="submit" width='large'>Book Unit</ButtonStandard>
-
-            </form>
+            <FormField className='grid grid-cols-2 gap-5'>
+              <FormInput label='Your Name'></FormInput>
+              <FormInput label='Your Email'></FormInput>
+              <FormInput label='Choose Unit' className='col-span-2'></FormInput>
+              <FormInput label='Storage Purpose' className='col-span-2'></FormInput>
+            </FormField>
           </div>
         </div>
       </div>

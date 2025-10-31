@@ -54,7 +54,10 @@ a:hover {color: var(--primary-green-dark);}
 
 .body-text-bold { font-size: 1rem; line-height: 1.5rem; font-weight: 700; color: var(--primary-green-dark);}
 
+.text-bold-acc {font-weight: 500;}
+
 .col-primary {color: var(--primary-color);}
+.col-bg-primary {background-color: var(--primary-color);}
 
 
 .sectionGreenLight {
@@ -429,4 +432,39 @@ a:hover {color: var(--primary-green-dark);}
     font-size: 0.8rem;
     line-height: 1.5rem;
     color: white;
+}
+
+
+.accordionItemClosed {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    margin-bottom: 0rem;
+
+    transition-property: max-height, padding, margin;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+
+.accordionItemOpen {
+    max-height: 200px;
+    overflow: hidden;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+
+    transition-property: max-height, padding, margin;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
+}
+
+.accordion {
+    background-color: var(--border-light-gr);
+    transition: background-color 300ms ease-out, color 200ms ease-out;
+}
+
+.accordionActive {
+    background-color: var(--primary-color);
+    color:white;
+    font-weight: 700;
+    transition: background-color 300ms ease-in, color 200ms ease-in;
 }

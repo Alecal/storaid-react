@@ -14,12 +14,12 @@ import SocialsBadge from './SocialsBadge';
 function FindUs() {
   return (
       <section id="findUs" className='sectionGreenLight'>
-        <div className='mx-auto max-w-5xl'>
+        <div className='mx-auto max-w-7xl'>
           <div className='flex w-full'>
-            <div className='w-1/2 relative'>
+            <div className='w-5/9 relative'>
               <div className="w-full h-[88%] absolute bottom-0 silhouetteWoman"></div>
             </div>
-            <div className='w-1/2 sectionGreenLighter p-5'>
+            <div className='w-4/9 sectionGreenLighter p-9'>
               <Headline size="h4" color="text-green">Find Us On:</Headline>
               <p className='text-green'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.

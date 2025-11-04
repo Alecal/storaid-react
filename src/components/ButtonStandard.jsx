@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ButtonStandard({ children, mode = 'dark', className = '', type = 'button', to = '', width =''}) {
+function ButtonStandard({ children, mode = 'dark', className = '', type = 'button', to = '', onClick='', width =''}) {
     const buttonHover = 'buttonHover'; 
     const buttonHoverLight = 'buttonHoverLight';
     const hoverClass = mode === 'dark' ? buttonHover : buttonHoverLight;
@@ -21,7 +21,8 @@ function ButtonStandard({ children, mode = 'dark', className = '', type = 'butto
     }
 
     const button = (
-        <button 
+        <button
+            {...(onClick && { onClick })}
             type={type} 
             className={`${width} bg-primary rounded-md btn-yellow transition duration-200 ease-in-out ${hoverClass} ${className}`}
         >
@@ -30,11 +31,7 @@ function ButtonStandard({ children, mode = 'dark', className = '', type = 'butto
     );
 
     if (to) {
-        return (
-            <Link to={to}>
-                {button}
-            </Link>
-        );
+        return <Link to={to}>{button}</Link>;
     }
     return button;
 }

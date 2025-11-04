@@ -22,7 +22,7 @@ function OurServices() {
         </div>
 
         <div className="w-4/10">
-          <div className='imageCard'>
+          <div className='imageCard h-100'>
             
           </div>
         </div>

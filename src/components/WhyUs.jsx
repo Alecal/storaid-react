@@ -38,7 +38,7 @@ function WhyUs({ bg = '' }) {
                 <p className='body-text-standard mb-10'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.
                 </p>
-                    <div className='imageCard flex items-center justify-center text-white'></div>
+                    <div className='imageCard h-100 flex items-center justify-center text-white'></div>
             </div>
         </div>
     </section>

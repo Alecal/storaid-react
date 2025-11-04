@@ -9,8 +9,8 @@ function InputField({ placeholder = '', required = false, id, className = '' }) 
     <div className='relative flex align-middle w-full'>
       <input id={id} value={textInput} onChange={ (e) => { setTextInput(e.target.value) } } placeholder='' className={`inputField w-full p-3 ${className}`} required={required} autoComplete="off"/>
       <div className={ `absolute top-1/2 left-3 transform -translate-y-1/2 pointer-events-none ${ textInput === '' ? '' : 'hidden' }` }>
-        <p className='col-primary body-text-standard'>
-          {placeholder}<span className='text-red-500 font-extrabold'>{ required === 'true' ? ' *' : '' }</span>
+        <p className='col-primary body-text-standard ml-2'>
+          {placeholder}<span className='text-red-500 font-extrabold'>{ required === true ? ' *' : '' }</span>
         </p>
       </div>
     </div>

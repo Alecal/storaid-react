@@ -30,7 +30,7 @@ h6 { font-size: 1.25rem; line-height: 1.5625rem; }
 p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
 a { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.5rem; color: var(--primary-color);}
-a:hover {color: var(--primary-green-dark);}
+
 
 .inputField {
     font-family: "Inter", sans-serif;
@@ -167,12 +167,18 @@ a:hover {color: var(--primary-green-dark);}
 
 .linkActive {
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .link {
     color: var(--primary-green-dark);
     font-weight: 600;
+}
+
+.link:hover {
+    color: var(--primary-green-dark);
+    font-weight: 800;
+    text-decoration: underline dotted var(--primary-green-dark) 3px;
 }
 
 .heroContainer {

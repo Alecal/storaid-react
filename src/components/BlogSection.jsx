@@ -10,7 +10,7 @@ function BlogSection() {
     const fetchData = async () => {
         const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/blogs')
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
 
         setblogPostCard(data)
     }

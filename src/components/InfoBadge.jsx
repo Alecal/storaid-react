@@ -14,7 +14,7 @@ function InfoBadge({ icon, title, subTitle = '', children, sm = false}) {
                 {title}
             </h6>
         )}
-        {subTitle !== '' && <h7>{subTitle}</h7>}
+        {subTitle !== '' && <h6>{subTitle}</h6>}
         {children !== '' && <p>{children}</p>}
         </div>
     </div>

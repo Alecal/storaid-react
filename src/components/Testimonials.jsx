@@ -8,7 +8,7 @@ const Testimonials = () => {
     const fetchData = async () => {
         const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/testimonials')
         const data = await res.json()
-        console.log(data)
+        // console.log(data)
 
         setTestimonialCard(data)
     }

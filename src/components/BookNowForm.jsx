@@ -4,7 +4,7 @@ import InputField from './InputField'
 import ButtonStandard from './ButtonStandard'
 import { Form } from 'react-router-dom'
 import FormField from './FormField'
-import FormInput from './FormInput.old'
+import FormInput from './old/FormInput.old'
 
 function BookNowForm() {
   return (

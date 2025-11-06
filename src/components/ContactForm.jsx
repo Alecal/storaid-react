@@ -7,56 +7,99 @@ import { faEnvelopeCircleCheck } from '@fortawesome/free-solid-svg-icons';
 
 function ContactForm() {
 
-  const [formData, setFormData] = useState({ name: '', email: '', phoneNumber: '', subject: '', comment: '' })
+  const [formData, setFormData] = useState({
+
+    name: '',
+    email: '',
+    phoneNumber: '',
+    subject: '',
+    comment: ''
+
+  })
+
   const [userMessage, setUserMessage] = useState()
-
   const [showCard, setShowCard] = useState(false);
-
   const [submitted, setSubmitted] = useState(false)
-
   const [errors, setErrors] = useState({})
-
+  const [isShaking, setIsShaking] = useState(false)
 
   const renderCard = (message, card) => {
     setShowCard(card)
     setUserMessage(message);
   }
-
+  
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData({ ...formData, [name]: value })
 
-    if(value.trim() === ''){
-      setErrors(prevErrors => ({...prevErrors, [name]: 'This field is required'}))
-    } else {
-      setErrors(prevErrors => ({...prevErrors, [name]: ''}))
-    }
+    validateField(name, value)
   }
-
+  
   const handleOk = () => {
-    
     setShowCard(false);
     setTimeout(() => {
       setSubmitted(false);
       setFormData({ name: '', email: '', phoneNumber: '', subject: '', comment: '' })}, 300);
-  }
+    }
   
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const validateField = (name, value) => {
+    let error = ''
 
-    const newErrors = {}
-
-    Object.keys(formData).forEach(field =>{
-      if(formData[field].trim() === ''){
-        newErrors[field] = 'Required'
-      }
-    })
-
-    if (Object.keys(newErrors).length > 0){
-      setErrors(newErrors)
-      return
+    if (name === 'name' && !/^\p{L}[\p{L}\s\-]{2,}$/u.test(value)) {
+      error = "Your name must be atleast 2 characters long, no numbers."
     }
 
+    if (name === 'email' && !/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
+      error = "Please enter a valid email address."
+    }
+
+    if (name === 'subject') {
+      if (value.trim().length < 3) {
+        error = "Subject must be at least 3 characters long."
+      } else if (value.trim().length > 100) {
+        error = "Subject must be less than 100 characters."
+      }
+    }
+
+    if (name === 'comment') {
+      if (value.trim().length < 10) {
+        error = "Comment must be at least 10 characters long."
+      } else if (value.trim().length > 500) {
+        error = "Comment must be less than 500 characters."
+      }
+    }
+
+    setErrors(prevErrors => ({...prevErrors, [name]: error}))
+  }
+
+  const validateForm = () => {
+    const newErrors = {}
+
+    if (!/^\p{L}[\p{L}\s\-]{2,}$/u.test(formData.name)){
+      newErrors.name = "Your name must be atleast 2 characters long, no numbers."
+    }
+    
+    if (!/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address."
+    }
+
+    if (formData.subject.trim().length < 3) {
+      newErrors.subject = "Subject must be at least 3 characters long."
+    } else if (formData.subject.trim().length > 100) {
+      newErrors.subject = "Subject must be less than 100 characters."
+    }
+
+    if (formData.comment.trim().length < 10) {
+      newErrors.comment = "Comment must be at least 10 characters long."
+    } else if (formData.comment.trim().length > 500) {
+      newErrors.comment = "Comment must be less than 500 characters."
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0;
+  }
+
+  const fetchData = async (e) => {
     const res = await fetch('https://win25-jsf-assignment.azurewebsites.net/api/contact', {
       method: 'post',
       headers: {
@@ -68,9 +111,21 @@ function ContactForm() {
         const data = await res.json()
         setTimeout(() => renderCard(data.message,true), 10);
         setSubmitted(true)
-        setFormData()
       } 
+  }
 
+  const handleSubmit = async (e) => {
+      e.preventDefault()
+
+      if (validateForm()) {
+        console.log('Form valid')
+        fetchData();
+        
+      } else {
+        console.log('Form invalid!')
+          setIsShaking(true)
+          setTimeout(() => setIsShaking(false), 500)
+      }
     }
 
     const okCard = () => {
@@ -155,23 +210,87 @@ function ContactForm() {
           </div>
 
           <div className='w-1/2 h-full'>
-            <div className='sectionYellowLight h-full rounded-md p-5'>
+            <div className=
+              {`${isShaking ? 'animate-shake bg-red-50' : 'sectionYellowLight'} h-full rounded-md p-5 transition-all duration-100 ease-out`}
+              >
+              <FormField
+                onChange={handleChange}
+                name='name'
+                label='Your Name'
+                placeholder='Your Name'
+                type='text'
 
-              <FormField onChange={handleChange} name='name' label='Your Name' error={errors.name && errors.name} value={formData.name} placeholder='Your Name' type='text' required={true}/>
+                error={errors.name && errors.name}
+                value={formData.name}
+
+
+                required={true}
+              />
+              
               <div className='flex gap-5'>
                 <div className='w-1/2'>
-                <FormField onChange={handleChange} name='email' label='Email' error={errors.email && errors.email} value={formData.email} placeholder='Email' type='Email' required={true}/>
+                  <FormField
+                    onChange={handleChange}
+                    name='email'
+                    label='Email'
+                    placeholder='Email'
+                    type='email'
+
+                    error={errors.email && errors.email}
+                    value={formData.email}
+                    
+                    required={true}
+                  />
                 </div>
 
                 <div className='w-1/2'>
-                  <FormField onChange={handleChange} name='phoneNumber' label='Phone number' value={formData.phoneNumber} placeholder='Phone number' type='phone' required={false}/>
+                  <FormField
+                    onChange={handleChange}
+                    name='phoneNumber'
+                    label='Phone number'
+                    placeholder='Phone number'
+                    type='text'
+
+                    error={errors.phoneNumber && errors.phoneNumber}
+                    value={formData.phoneNumber}
+
+                    required={false}
+                  />
                 </div>
               </div>
 
-              <FormField onChange={handleChange} name='subject' label='Subject' error={errors.subject && errors.subject}  value={formData.subject} placeholder='How can we help you' type='text' required={true}/>
-              <FormField inputType='textarea' onChange={handleChange} name='comment' error={errors.comment && errors.comment} label='Comments / Questions' value={formData.comment} placeholder='Comments' type='text' required={true}/>
+              <FormField
+                onChange={handleChange}
+                name='subject'
+                label='Subject'
+                placeholder='How can we help you'
+                type='text'
 
-              <button className='bg-primary rounded-md btn-yellow transition duration-200 ease-in-out px-7 py-2 buttonHover'>Submit</button>
+                error={errors.subject && errors.subject}
+                value={formData.subject}
+
+                required={true}
+              />
+              <FormField
+                inputType='textarea'
+                onChange={handleChange}
+                name='comment'
+                label='Comments / Questions'
+                placeholder='Comments'
+                type='text'
+
+                error={errors.comment && errors.comment}
+                value={formData.comment}
+
+                required={true}
+              />
+
+              <button 
+                type='submit' 
+                className={`${isShaking ? 'animate-shake bg-red-500 text-red-50' : 'bg-primary transition duration-200 ease-in-out buttonHover btn-yellow'} rounded-md px-7 py-2`}
+              >
+                Submit
+              </button>
             </div>
           </div>
 

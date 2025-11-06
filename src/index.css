@@ -31,6 +31,16 @@ p { font-family: "Inter", sans-serif; font-weight: 300; font-style: normal;}
 
 a { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.5rem; color: var(--primary-color);}
 
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+}
+
+.animate-shake {
+    animation: shake 0.3s;
+}
+
 .inputField {
     padding: 1rem;
     font-family: "Inter", sans-serif;
@@ -124,6 +134,10 @@ a { font-family: "Inter", sans-serif; font-size: 1rem; line-height: 1.5rem; colo
     font-weight: 600; 
 }
 
+.btn-red {
+    color:red;
+    font-weight: 600; 
+}
 .contactContainer{
     display: flex;
     gap: 2rem;

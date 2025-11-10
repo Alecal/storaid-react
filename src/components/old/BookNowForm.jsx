@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import Headline from './Headline'
-import InputField from './InputField'
-import ButtonStandard from './ButtonStandard'
+import Headline from '../Headline'
+import InputField from '../InputField'
+import ButtonStandard from '../ButtonStandard'
 import { Form } from 'react-router-dom'
-import FormField from './FormField'
-import FormInput from './old/FormInput.old'
+import FormField from '../FormField'
+import FormInput from './FormInput.old'
 
 function BookNowForm() {
 

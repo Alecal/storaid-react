@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function InfoBadge({ icon, title, subTitle = '', children, sm = false}) {
 
   return (
-    <div className='infoBadgeContainer text-green mb-1'> 
+    <div className='infoBadgeContainer text-green mb-1 transition duration-200 transform hover:translate-x-5 hover:scale-103'> 
         <div className={sm ? 'infoBadgeIconSm' : 'infoBadgeIcon'}><FontAwesomeIcon icon={icon} /></div>
         <div>
         {title !== '' && (

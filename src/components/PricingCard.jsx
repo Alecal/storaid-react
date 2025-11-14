@@ -12,7 +12,7 @@ function PricingCard({
                     })
 {
   return (
-    <div className='pricingCard text-center p-8 px-8 flex-1 border rounded-md h-full transition transform hover:scale-107'>
+    <div className='pricingCard text-center p-8 px-8 flex-1 border rounded-md h-full'>
         <h5 className='group-hover:text-white'>{title}</h5>
         <div className='grid my-2'>
                 <p className='body-text-pricing'>

@@ -281,7 +281,8 @@ select option {
     border-radius: .5rem;
     padding: 1rem;
     color: var(--primary-green-dark);
-
+    width: 100%;
+    height: 100%;
     transition: border-color 0.5s ease;
 }
 
@@ -399,16 +400,17 @@ select option {
 }
 
 .pricingCard {
-	border-radius: .5rem;
-	border:3px solid var(--border-light-gr);
-	color: var(--primary-green-dark);
-	background-color: var(--primary-lime-light);
+    border-radius: .5rem;
+    border: 3px solid var(--border-light-gr);
+    color: var(--primary-green-dark);
+    background-color: var(--primary-lime-light);
+    transition: all 0.3s ease-in-out;
 }
 
-.pricingCard:hover{
-	background-color: var(--primary-green-dark);
-
-	transition: background-color 0.5s ease;
+.pricingCard:hover {
+    background-color: var(--primary-green-dark);
+    color: var(--primary-lime-light);
+    transform: translateY(-0.5rem) scale(1.05);
 }
 
 .pricingCard:hover h5,
@@ -418,12 +420,14 @@ select option {
 .pricingCard:hover p
 {
 	color: white;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .pricingCard:hover svg,
 .pricingCard:hover .body-text-pricing
 {
 	color: var(--primary-color);
+    transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 .body-text-pricing {

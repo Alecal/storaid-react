@@ -7,7 +7,7 @@ function OurServices() {
     <section id="our-services" className='flex-row gap-8 mx-auto max-w-7xl py-25'>
       <div className="flex gap-6 mb-5 ">
         <div className="w-1/2">
-          <Headline size="h3" title="Our Services" color="text-green">Specialized Storage for Every Special Item</Headline>
+          <Headline size="h2" title="Our Services" contrast={true} color="text-green">Specialized Storage for Every Special Item</Headline>
         </div>
 
         <div className="w-1/2">
@@ -23,7 +23,7 @@ function OurServices() {
 
         <div className="w-4/10">
           <div className='imageCard h-100'>
-            
+            <img src='./src/assets/images/storage-lock.jpg' alt=''/>
           </div>
         </div>
 

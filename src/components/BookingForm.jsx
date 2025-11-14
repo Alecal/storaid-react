@@ -156,8 +156,10 @@ function BookingForm() {
     const renderContent = () => {
       return(
           <div className='w-1/2 flex flex-col'>
-            <Headline title='Booking Unit' color='text-green' titleMargin='mb-2' size='h3'>Book Your Storage Unit Now & Simplify Your Life!</Headline>
-            <div className='imageCard h-full flex-1'></div>
+            <Headline title='Booking Unit' color='text-green' contrast={true} titleMargin='mb-2' size='h2'>Book Your Storage Unit Now & Simplify Your Life!</Headline>
+            <div className='imageCard flex-1'>
+              <img className='h-full' src='./src/assets/images/storage-units.jpg'/>
+            </div>
           </div>
       )
     }

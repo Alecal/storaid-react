@@ -20,7 +20,7 @@ function FindUs() {
               <div className="w-full h-[88%] absolute bottom-0 silhouetteWoman"></div>
             </div>
             <div className='w-4/9 sectionGreenLighter p-9'>
-              <Headline size="h4" color="text-green">Find Us On:</Headline>
+              <Headline size="h2" color="text-green">Find Us On:</Headline>
               <p className='text-green'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
               </p>
@@ -39,7 +39,7 @@ function FindUs() {
                       </div>
                       <div className='grow mx-4 border-t border-black border-opacity-30'/>
                       <div className='shrink-0'>
-                          <SocialsBadge names={['facebook', 'twitter', 'instagram', 'youtube']} />
+                          <SocialsBadge names={['Facebook', 'Twitter/X', 'Instagram', 'YouTube']} />
                       </div>
                     </div>
               

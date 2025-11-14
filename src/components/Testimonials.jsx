@@ -21,7 +21,7 @@ const Testimonials = () => {
         <section id="testimonials" className='testimonialsWrapper'>
       <div className="testimonialsContainer">
         <div className="testimonialsContent text-center mx-auto max-w-7xl py-20">
-          <Headline title="Testimonials" size="h3" color="text-white">See What Our Client Have to Say</Headline>
+          <Headline title="Testimonials" size="h2" color="text-white">See What Our Client Have to Say</Headline>
           <p className='mb-5 text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.</p>
 
 	<div className='flex justify-between gap-6'>

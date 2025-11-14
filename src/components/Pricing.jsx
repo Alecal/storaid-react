@@ -7,7 +7,7 @@ function Pricing() {
     <section id="pricing" className='flex gap-8 mx-auto max-w-7xl py-25'>
         <div className='w-full'>
             <div className='w-150'>
-                <Headline size="h3" title="Pricing Plan" color="text-green">Find the Perfect Plan for Your Storage Needs</Headline>
+                <Headline size="h2" contrast={true} title="Pricing Plan" color="text-green">Find the Perfect Plan for Your Storage Needs</Headline>
             </div>
 
             <div className='flex justify-between gap-6'>

@@ -10,11 +10,11 @@ function InfoBadge({ icon, title, subTitle = '', children, sm = false}) {
         <div className={sm ? 'infoBadgeIconSm' : 'infoBadgeIcon'}><FontAwesomeIcon icon={icon} /></div>
         <div>
         {title !== '' && (
-            <h6 className={subTitle === '' ? (children !== '' ? 'mb-2' : 'mb-1') : ''}>
+            <p className={`${sm ? 'infoBadgeTitleSm' : 'infoBadgeTitle'} ${subTitle === '' ? (children ? 'mb-2' : 'mb-1') : ''}`}>
                 {title}
-            </h6>
+            </p>
         )}
-        {subTitle !== '' && <h6>{subTitle}</h6>}
+        {subTitle !== '' && <p className='infoBadgeSubTitle'>{subTitle}</p>}
         {children !== '' && <p>{children}</p>}
         </div>
     </div>

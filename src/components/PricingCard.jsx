@@ -12,15 +12,17 @@ function PricingCard({
                     })
 {
   return (
-    <div className='pricingCard text-center p-8 px-8 flex-1 border rounded-md h-full'>
-        <h5 className='group-hover:text-white'>{title}</h5>
+    <article className='pricingCard text-center p-8 px-8 flex-1 border rounded-md h-full drop-shadow-xl/25'>
+        <h3 className='group-hover:text-white'>{title}</h3>
         <div className='grid my-2'>
-                <p className='body-text-pricing'>
-                    <span className='pricingCard-dollarSign'>
-                        <FontAwesomeIcon icon={faDollarSign} />
+                <p className='body-text-pricing' aria-label={`${price} dollars per month`}>
+                    <span className='pricingCard-dollarSign' aria-hidden="true">
+                        <FontAwesomeIcon icon={faDollarSign}/>
                     </span>
-                    {price}
-                    <span className='body-text-standard ml-5'>
+                    <span className='body-text-pricing priceText'>
+                        {price}
+                    </span>
+                    <span className='body-text-standard ml-5' aria-hidden="true">
                         /month
                     </span>
                 </p> 
@@ -28,21 +30,21 @@ function PricingCard({
         <p className='body-text-standard '>
             {description} 
         </p>
-        <hr className='pricingCardSeparator'/> 
+        <hr className='pricingCardSeparator' aria-hidden="true"/> 
             <div className='text-left pb-5'>
                 <ul className='pricingCardList'>
                     {listItems.map((item, index) => (
                         <li className='pb-2' key={index}>
-                            <FontAwesomeIcon className='pr-2' icon={faCircleCheck} /> 
+                            <FontAwesomeIcon className='pr-2' icon={faCircleCheck} aria-hidden="true" /> 
                             {item} 
                         </li>
                     ))}
                 </ul>
             </div>
             <div className='my-auto mt-auto'>
-                <ButtonStandard mode='light'>{buttonText}</ButtonStandard>
+                <ButtonStandard mode='light' aria-label={`Rent ${title} for $${price} per month`}>{buttonText}</ButtonStandard>
             </div>
-    </div>
+    </article>
   )
 }
 

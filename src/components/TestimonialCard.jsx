@@ -19,28 +19,31 @@ const TestimonialCard = ({ item }) => {
     }
   
     return (
-    <div className='testimonialsCardWrapper flex-1 h-70 rounded-md p-6 text-left bg-white text-green flex flex-col transition duration-200 transform hover:scale-105'>
-
-        <div className='mb-5'>{ generateRating(item.rating) }</div>
-        <p className='mb-5'>{ item.comment }</p>
+    <figure className='testimonialsCardWrapper flex-1 h-70 rounded-md p-6 text-left bg-white text-green flex flex-col transition duration-200 transform hover:scale-105'>
+        <blockquote>
+            <div className='mb-5' role="img" aria-label={`Rating: ${item.rating} out of 5 stars`}>
+                { generateRating(item.rating) }
+            </div>
+            <p className='mb-5'>{ item.comment }</p>
+        </blockquote>
         
-        <div className='mt-auto'>
+        <figcaption className='mt-auto'>
             <div className='flex items-center gap-4'> 
 
-                    <img className="testimonialsCardAvatar" src={ item.avatarUrl }/>
+                    <img className="testimonialsCardAvatar" src={ item.avatarUrl } alt={`${item.name}`}/>
 
-                <div className="">
+                <div>
                     <p className="body-text-bold">{ item.name }</p>
                     <p className="body-text-small">{ item.companyName }</p>
                 </div>
             </div>
-        </div>
+        </figcaption>
         
-        <div className="testimonialsCardIcon self-end">
+        <div className="testimonialsCardIcon self-end" aria-hidden="true">
             <FontAwesomeIcon icon={faQuoteRight} />
         </div>
 
-    </div>
+    </figure>
   )
 }
 

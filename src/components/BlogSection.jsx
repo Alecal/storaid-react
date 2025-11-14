@@ -27,7 +27,7 @@ function BlogSection() {
             <div className='flex gap-8 mx-auto mb-5'>
 
                 <div className='w-1/2'>
-                    <Headline title="Latest Blog and News" size="h3" color="text-green" titleMargin='mb-0'>Check Out Our Latest Blog and News Update</Headline>
+                    <Headline title="Latest Blog and News" contrast={true} size="h2" color="text-green" titleMargin='mb-0'>Check Out Our Latest Blog and News Update</Headline>
                 </div>
 
                 <div className='flex w-1/2'>

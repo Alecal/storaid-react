@@ -7,7 +7,7 @@ function Faq() {
   return (
     <div className='flex mx-auto max-w-7xl py-25 gap-15'>
       <div className='w-1/2'>
-        <Headline title='FAQs' size='h3' color='text-green'>
+        <Headline title='FAQs' size='h3' color='text-green' contrast={true}>
           Frequently Ask Questions
         </Headline>
         <p className='text-green'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>

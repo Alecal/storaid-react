@@ -6,10 +6,10 @@ import instagramIcon from '../assets/icons/instagram.svg';
 import youtubeIcon from '../assets/icons/youtube.svg';
 
 const icons = {
-  facebook: facebookIcon,
-  twitter: twitterIcon,
-  instagram: instagramIcon,
-  youtube: youtubeIcon,
+  'Facebook': facebookIcon,
+  'Twitter/X': twitterIcon,
+  'Instagram': instagramIcon,
+  'YouTube': youtubeIcon,
 };
 
 function SocialsBadge({ names }) {
@@ -27,7 +27,7 @@ function SocialsBadge({ names }) {
             <img
               className="socialsIcon"
               src={iconSrc}
-              alt={`${name} icon`}
+              alt={`Link to ${name}`}
             />
           </div>
         );

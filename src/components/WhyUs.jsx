@@ -14,7 +14,7 @@ function WhyUs({ bg = '' }) {
     <section id="whyUs" className={`${bg && bg} py-20 `}>
         <div className='flex gap-8 mx-auto max-w-7xl'>
             <div className='w-1/2'> 
-                <Headline title="Why Choose Us" size="h3" color="text-green">Choose Us for Exceptional Storage Solutions</Headline>
+                <Headline title="Why Choose Us" contrast={true} size="h2" color="text-green">Choose Us for Exceptional Storage Solutions</Headline>
                 <div className='grid gap-4'>
 
                     <InfoBadge icon={faLock} title="Security and Safety">
@@ -38,7 +38,9 @@ function WhyUs({ bg = '' }) {
                 <p className='body-text-standard mb-10'>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida.
                 </p>
-                    <div className='imageCard h-100 flex items-center justify-center text-white'></div>
+                    <div className='imageCard h-100 flex items-center justify-center text-white'>
+                        <img src='./src/assets/images/storage-units.jpg' alt=''/>
+                    </div>
             </div>
         </div>
     </section>

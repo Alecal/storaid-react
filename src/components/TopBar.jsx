@@ -18,7 +18,7 @@ function TopBar() {
           </div>
         </div>
         <div className="socialsContainer">
-          <SocialsBadge names={['facebook', 'twitter', 'instagram', 'youtube']} />
+          <SocialsBadge names={['Facebook', 'Twitter/X', 'Instagram', 'YouTube']} />
         </div>
       </div>
     </div>

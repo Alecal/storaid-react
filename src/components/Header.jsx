@@ -13,7 +13,7 @@ function Header() {
 
             <div className="logo">
               <Link to="/">
-                <img src={LogoType}/>
+                <img src={LogoType} alt='StorAid logo'/>
               </Link>
             </div>
             <Navigation />

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <>
+    <header>
         <TopBar/>
         <div className="headerContainer container mx-auto py-4">
 
@@ -19,7 +19,7 @@ function Header() {
             <Navigation />
               <ButtonStandard to="/booking">Book Now</ButtonStandard>
         </div>
-    </>
+    </header>
   )
 }
 

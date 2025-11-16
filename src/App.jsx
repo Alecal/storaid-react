@@ -12,15 +12,17 @@ import NotFound from './views/404-NotFound'
 function App() {
   return (
     <BrowserRouter>
-    <Header/>
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/about" element={<About/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/services" element={<Services/>} />
-        <Route path="/booking" element={<Booking/>} />
-        <Route path="*" element={<NotFound/>} />
-      </Routes>
+      <Header/>
+        <main>
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/about" element={<About/>} />
+            <Route path="/contact" element={<Contact/>} />
+            <Route path="/services" element={<Services/>} />
+            <Route path="/booking" element={<Booking/>} />
+            <Route path="*" element={<NotFound/>} />
+          </Routes>
+        </main>
       <Footer/>
     </BrowserRouter>
   )

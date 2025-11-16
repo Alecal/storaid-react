@@ -164,10 +164,13 @@ function ContactForm() {
       <div className='mx-auto max-w-7xl py-20 relative'>
       
         <div className='flex flex-row gap-6'>
+
           <div className='w-1/2 flex flex-col'>
-            <Headline title='Get in Touch' color='text-green' titleMargin='mb-2' size='h3'>Get Personalized Assistance – Contact Us</Headline>
+            <Headline title='Get in Touch' color='text-green' contrast={true} titleMargin='mb-2' size='h2'>Get Personalized Assistance – Contact Us</Headline>
             <p className='body-text-standard mb-5 h-auto'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo</p>
-            <div className='imageCard h-full flex-1'></div>
+            <div className='imageCard h-full flex-1'>
+                <img src='./src/assets/images/storage-exterior.jpg' alt=''/>
+            </div>
           </div>
 
           <div className='w-1/2 h-full relative '>
